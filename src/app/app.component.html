@@ -1,14 +1,14 @@
 <div *ngIf="!isLoggedIn()">
+    Please login with any provider.
     <table>
         <tr>
-            <td><button (click)="googleLogin()">GOOGLE LOGIN</button></td>
-            <td><button (click)="faceBookLogin()">FACEBOOK LOGIN</button></td>
-            <td><button (click)="microsoftLogin()">MICROSOFT LOGIN</button></td>
+            <td><button (click)="googleLogin()"> <img src="../assets/google_icon.png"> SIGN IN</button></td>
+            <td><button (click)="faceBookLogin()"> <img src="../assets/facebook_icon.png"> SIGN IN</button></td>
+            <td><button (click)="microsoftLogin()"> <img src="../assets/microsoft_icon.png"> SIGN IN</button></td>
         </tr>
     </table>
-    Please login with any provider.
 </div>
 <div *ngIf="isLoggedIn()">
-    Your are logged in. Welcome {{user.firstName}}! Your are logged in with {{user.provider}}.
-    <button (click)="logout()">LOGOUT</button>
+    Your are logged in. Welcome {{user.firstName}}! Your are signed in with {{user.provider}}.
+    <button (click)="logout()">SIGN OUT</button>
 </div>
